@@ -57,16 +57,20 @@ I have tried several times to install it and this is the only method that has wo
 ## Add ODE to Eclipse
 * On Eclipse, go to _Window > Preferences > Server > Runtime environments > Add >_ and select ```Apache Ode 1.x Runtime```
   * Configuration of the Runtime
-   * ```JRE: jre1.8.0_x```
-   * ```ODE's home directory: C:\tomcat9\webapps\ode```
-   * ```Tomcat's home directory: C:\tomcat9\```
-   * ```Server address: localhost```
-   * ```Port: 9090```
-   * ```VM arguments: -Xms128m -Xmx512m -XX:MaxPermSize=256m```
-* Go to the _Server_ tab and double click on _Ode 1.x Server_
+    * ```JRE: jre1.8.0_x```
+    * ```ODE's home directory: C:\tomcat9\webapps\ode```
+    * ```Tomcat's home directory: C:\tomcat9\```
+    * ```Server address: localhost```
+    * ```Port: 9090```
+    * ```VM arguments: -Xms128m -Xmx512m -XX:MaxPermSize=256m```
+* Add the ```tomcat-juli.jar``` library to the server classpath
+  * Go to the _Server_ tab and double click on _Ode 1.x Server_
   * Click on _Open launch configuration > Classpath > User entries_
   * Click on _Add external JARs_
   * Go to ```C:\tomcat9\bin``` and select ```tomcat-juli.jar```
+* Change the port to be 9090
+  * Go to the _Server_ tab and double click on _Ode 1.x Server_
+  * Click on _Runtime environment_ and change the port to ```9090```
 
 # Project configuration
 
